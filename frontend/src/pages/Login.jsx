@@ -20,17 +20,48 @@ export default function Login() {
   }
 
   return (
-    <div className="max-w-md mx-auto mt-16 px-6">
-      <h1 className="font-display text-3xl mb-6">Log in</h1>
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <input className="w-full border border-ink/20 rounded px-3 py-2" placeholder="Email" type="email"
-          value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} required />
-        <input className="w-full border border-ink/20 rounded px-3 py-2" placeholder="Password" type="password"
-          value={form.password} onChange={(e) => setForm({ ...form, password: e.target.value })} required />
-        {error && <p className="text-clay text-sm">{error}</p>}
-        <button className="w-full bg-ink text-paper rounded py-2" type="submit">Log in</button>
-      </form>
-      <p className="mt-4 text-sm">New here? <Link className="underline" to="/signup">Create an account</Link></p>
+    <div className="min-h-screen flex items-center justify-center px-6">
+      <div className="w-full max-w-sm">
+        <div className="mb-8 text-center">
+          <p className="eyebrow mb-2">Skill barter, no cash</p>
+          <h1 className="font-display text-4xl font-semibold text-ink">SkillSwap</h1>
+        </div>
+        <div className="bg-white border border-ink/10 rounded-sm p-8 shadow-[3px_3px_0_0_rgba(22,41,43,0.08)]">
+          <h2 className="font-display text-xl font-medium mb-6">Log in</h2>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <label className="eyebrow block mb-1.5">Email</label>
+              <input
+                className="w-full border border-ink/20 rounded-sm px-3 py-2.5 font-body focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold"
+                type="email"
+                value={form.email}
+                onChange={(e) => setForm({ ...form, email: e.target.value })}
+                required
+              />
+            </div>
+            <div>
+              <label className="eyebrow block mb-1.5">Password</label>
+              <input
+                className="w-full border border-ink/20 rounded-sm px-3 py-2.5 font-body focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold"
+                type="password"
+                value={form.password}
+                onChange={(e) => setForm({ ...form, password: e.target.value })}
+                required
+              />
+            </div>
+            {error && <p className="text-rust text-sm">{error}</p>}
+            <button
+              className="w-full bg-ink text-paper rounded-sm py-2.5 font-medium hover:bg-ink-soft transition-colors"
+              type="submit"
+            >
+              Log in
+            </button>
+          </form>
+        </div>
+        <p className="mt-6 text-sm text-center text-ink-soft">
+          New here? <Link className="underline text-ink" to="/signup">Create an account</Link>
+        </p>
+      </div>
     </div>
   );
 }
