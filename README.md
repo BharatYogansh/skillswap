@@ -1,8 +1,10 @@
 # SkillSwap
+
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
 ![Express](https://img.shields.io/badge/Express.js-000000?style=flat&logo=express&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white)
 ![Socket.io](https://img.shields.io/badge/Socket.io-black?style=flat&logo=socket.io&logoColor=white)
+
 A zero-money skill-barter platform. Trade time and knowledge instead of cash:
 teach guitar, get taught to cook. Users spend and earn "credits" instead of
 currency.
