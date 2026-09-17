@@ -92,9 +92,11 @@ swap. Login with any of the printed emails / password `demo1234`.
    set root directory to `backend`. `render.yaml` at the repo root has the
    config pre-filled — Render will pick it up automatically. Set `MONGO_URI`,
    `JWT_SECRET`, and `CLIENT_URL` (your Vercel URL) as environment variables.
-3. **Frontend → Vercel**: import the repo, set root directory to `frontend`.
-   `vercel.json` handles the SPA rewrite. Set `VITE_API_URL` and
-   `VITE_SOCKET_URL` to your Render backend URL.
+3. **Frontend → Render (Static Site)**: create a Static Site from the repo,
+   set root directory to `frontend`, build command
+   `npm install && npm run build`, publish directory `dist`. Set
+   `VITE_API_URL` and `VITE_SOCKET_URL` to your Render backend URL + `/api`
+   (API) and without `/api` (socket).
 4. Update the backend's `CLIENT_URL` env var to the live Vercel URL once you
    have it, so CORS allows the deployed frontend.
 
